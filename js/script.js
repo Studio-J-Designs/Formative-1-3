@@ -43,6 +43,7 @@ var languages = [{
   name: 'Chinese'
 }];
 
+
 var countrys = [{
   code: 'ar',
   name: 'Argentina',
@@ -205,7 +206,30 @@ var countrys = [{
 },{
   code: 've',
   name: 'Venezuela',
-}]
+}];
+
+var categorys = [{
+  code: 'business',
+  name: 'Business'
+},{
+  code: 'entertainment',
+  name: 'Entertainment'
+},{
+  code: 'general',
+  name: 'General'
+},{
+  code: 'health',
+  name: 'Health'
+},{
+  code: 'science',
+  name: 'Science'
+},{
+  code: 'sports',
+  name: 'Sports'
+},{
+  code: 'technology',
+  name: 'Technology'
+}];
 
 
 
@@ -227,6 +251,12 @@ for (var i = 0; i < countrys.length; i++) {
   document.getElementById('country').innerHTML += '<option class="dropdown-item" value="' + countrys[i].code + '">' + countrys[i].name + '</option>';
 }
 
+document.getElementById('category').innerHTML = '';
+
+for (var i = 0; i < categorys.length; i++) {
+  document.getElementById('category').innerHTML += '<option class="dropdown-item" value="' + categorys[i].code + '">' + categorys[i].name + '</option>';
+}
+
 
 
 
@@ -241,14 +271,19 @@ myKey = myKey[0].key;
 document.getElementById('submit').addEventListener('click', function(){
   language = document.getElementById('language').value;
   country = document.getElementById('country').value;
-  console.log(language,country);
-  displayData(language,country);
+  category = document.getElementById('category').value;
+  console.log(category,language,country);
+  displayData(category,language,country);
 
 
-  function displayData(lg, ct){
+  function displayData(ca,lg, ct){
+
+    if (true) {
+
+    }
 
 $.ajax({
-  url: `http://newsapi.org/v2/sources?language=${lg}&country=${ct}&apiKey=${myKey}`,
+  url: `http://newsapi.org/v2/sources?category=${ca}&language=${lg}&country=${ct}&apiKey=${myKey}`,
   type:'GET',
   data:'json',
     success: function(data){
