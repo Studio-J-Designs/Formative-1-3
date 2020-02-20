@@ -3,6 +3,9 @@
 console.log('working');
 
 var languages = [{
+  code: 0,
+  name: 'Language'
+},{
   code: 'ar',
   name: 'Arabic'
 },{
@@ -45,6 +48,9 @@ var languages = [{
 
 
 var countrys = [{
+  code: 0,
+  name: 'Country'
+},{
   code: 'ar',
   name: 'Argentina',
 },{
@@ -209,6 +215,9 @@ var countrys = [{
 }];
 
 var categorys = [{
+  code: 0,
+  name: 'Category'
+},{
   code: 'business',
   name: 'Business'
 },{
@@ -262,49 +271,94 @@ for (var i = 0; i < categorys.length; i++) {
 
 
 
-$(document).ready(function(){
+// $(document).ready(function(){
+//
+// var myKey = JSON.parse(apiKey);
+// console.log(myKey[0]);
+// myKey = myKey[0].key;
+//
+//   document.getElementById('submit').addEventListener('click', function(){
+//     if (document.getElementById('language').value === 0) {
+//     } else {
+//       language = "language=" + document.getElementById('language').value + "&";
+//     }
+//     if (document.getElementById('country').value === 0) {
+//     } else {
+//       country = "country=" + document.getElementById('country').value + "&";
+//     }
+//     category = "category=" + document.getElementById('category').value + "&";
+//     console.log(category,language,country);
+//     displayData(category,language,country);
+//
+//     function displayData(ca,lg,ct){
+//
+//       $.ajax({
+//         url: `http://newsapi.org/v2/top-headlines?${ca}${lg}${ct}apiKey=${myKey}`,
+//         type:'GET',
+//         data:'json',
+//           success: function(data){
+//             console.log(data);
+//             },
+//           error:function(){
+//             console.log('error');
+//           }
+//         });
+//       }
+//
+//   });
+//
+// });
+
 
 var myKey = JSON.parse(apiKey);
 console.log(myKey[0]);
 myKey = myKey[0].key;
 
+var category,country,language,source;
+
+buildURL();
+
+$('#category').change(function(){
+  if ($("#category").val() !== 0){
+      console.log(category);
+  $('#language').attr('disabled', true);}
+  if (category == 0){
+      console.log(category);
+  $('#language').attr('disabled', false);}
+});
+
+
+
 document.getElementById('submit').addEventListener('click', function(){
-  language = document.getElementById('language').value;
-  country = document.getElementById('country').value;
   category = document.getElementById('category').value;
-  console.log(category,language,country);
-  displayData(category,language,country);
-
-
-  function displayData(ca,lg, ct){
-
-    if (true) {
-
-    }
-
-$.ajax({
-  url: `http://newsapi.org/v2/sources?category=${ca}&language=${lg}&country=${ct}&apiKey=${myKey}`,
-  type:'GET',
-  data:'json',
-    success: function(data){
-      console.log(data);
-      },
-    error:function(){
-      console.log('error');
-    }
+  country = document.getElementById('country').value;
+  language = document.getElementById('language').value;
+  buildURL();
   });
 
+function buildURL(){
+  var baseURL = "http://newsapi.org/v2/top-headlines?";
+  console.log(baseURL);
 
+  if (category != 0 && category != undefined)baseURL += "category=" + category + "&";
+  if (country != 0 && country != undefined)baseURL += "country=" + country + "&";
+  if (language != 0 && language != undefined)baseURL += "language=" + language + "&";
+  if (baseURL === "http://newsapi.org/v2/top-headlines?")baseURL += "country=nz&"
+  baseURL += "apiKey=" + myKey;
+  print(baseURL);
+}
 
-  }
+function print(url){
 
-
-
-
-
-
-
-
-});
-
-});
+  $.ajax({
+          url: url,
+          type:'GET',
+          data:'json',
+            success: function(data){
+              console.log(data);
+              },
+            error:function(){
+              console.log('error');
+            }
+          });
+}
