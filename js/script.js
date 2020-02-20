@@ -770,15 +770,22 @@ function print(url){
               document.getElementById('result').innerHTML = '';
                 for (var i = 0; i < data.articles.length; i++) {
                   var author = data.articles[i].author;
-                    if (data.articles[i].author == null) {
-                      author = 'Unkown';
+                    if (author == null && data.articles[i].source.name == null) {
+                      console.log(author + "1");
+                      author = "Author: Unkown";
+                    } else if (author == null) {
+                      console.log(author + "2");
+                      author = "Source: " + data.articles[i].source.name;
+                    } else {
+                      console.log(author + "3");
+                      author = "Author: " + author
                     };
                   console.log(i);
                   document.getElementById('result').innerHTML +=
                   '<div class="card" style="width: 18rem;">' +
-                  '<img onerror="this.onerror=null; this.style.src=\'assets/images/backupNews.png\'" src="' + data.articles[i].urlToImage + '" class="card-img-top" alt="...">' +
+                  '<img onerror="backupNews(this)" src="' + data.articles[i].urlToImage + '" class="card-img-top" alt="...">' +
                   '<div class="card-body">' +
-                  '<h5 class="card-title">Author: ' + author + '</h5>' +
+                  '<h5 class="card-title">' + author + '</h5>' +
                   '<p class="card-text">' + data.articles[i].title + '</p>' +
                   '<a href="' + data.articles[i].url + '" class="btn btn-primary">View Story</a>' +
                   '</div>' +
@@ -789,4 +796,10 @@ function print(url){
               console.log('error');
             }
           });
+}
+
+function backupNews(source){
+  source.src="assets/images/backupNews.jpg";
+  source.onerror="";
+  return true;
 }
