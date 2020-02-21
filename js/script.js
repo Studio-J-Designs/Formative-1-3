@@ -244,391 +244,391 @@ var sources = [{
   code: 0,
   name: 'Source'
 },{
-id: "abc-news",
+code: "abc-news",
 name: "ABC News",
 },{
-id: "abc-news-au",
+code: "abc-news-au",
 name: "ABC News (AU)",
 },{
-id: "aftenposten",
+code: "aftenposten",
 name: "Aftenposten",
 },{
-id: "al-jazeera-english",
+code: "al-jazeera-english",
 name: "Al Jazeera English",
 },{
-id: "ansa",
+code: "ansa",
 name: "ANSA.it",
 },{
-id: "argaam",
+code: "argaam",
 name: "Argaam",
 },{
-id: "ars-technica",
+code: "ars-technica",
 name: "Ars Technica",
 },{
-id: "ary-news",
+code: "ary-news",
 name: "Ary News",
 },{
-id: "associated-press",
+code: "associated-press",
 name: "Associated Press",
 },{
-id: "australian-financial-review",
+code: "australian-financial-review",
 name: "Australian Financial Review",
 },{
-id: "axios",
+code: "axios",
 name: "Axios",
 },{
-id: "bbc-news",
+code: "bbc-news",
 name: "BBC News",
 },{
-id: "bbc-sport",
+code: "bbc-sport",
 name: "BBC Sport",
 },{
-id: "bild",
+code: "bild",
 name: "Bild",
 },{
-id: "blasting-news-br",
+code: "blasting-news-br",
 name: "Blasting News (BR)",
 },{
-id: "bleacher-report",
+code: "bleacher-report",
 name: "Bleacher Report",
 },{
-id: "bloomberg",
+code: "bloomberg",
 name: "Bloomberg",
 },{
-id: "breitbart-news",
+code: "breitbart-news",
 name: "Breitbart News",
 },{
-id: "business-insider",
-name: "Business Insider",
+code: "business-inscodeer",
+name: "Business Inscodeer",
 },{
-id: "business-insider-uk",
-name: "Business Insider (UK)",
+code: "business-inscodeer-uk",
+name: "Business Inscodeer (UK)",
 },{
-id: "buzzfeed",
+code: "buzzfeed",
 name: "Buzzfeed",
 },{
-id: "cbc-news",
+code: "cbc-news",
 name: "CBC News",
 },{
-id: "cbs-news",
+code: "cbs-news",
 name: "CBS News",
 },{
-id: "cnbc",
+code: "cnbc",
 name: "CNBC",
 },{
-id: "cnn",
+code: "cnn",
 name: "CNN",
 },{
-id: "cnn-es",
+code: "cnn-es",
 name: "CNN Spanish",
 },{
-id: "crypto-coins-news",
+code: "crypto-coins-news",
 name: "Crypto Coins News",
 },{
-id: "der-tagesspiegel",
+code: "der-tagesspiegel",
 name: "Der Tagesspiegel",
 },{
-id: "die-zeit",
+code: "die-zeit",
 name: "Die Zeit",
 },{
-id: "el-mundo",
+code: "el-mundo",
 name: "El Mundo",
 },{
-id: "engadget",
+code: "engadget",
 name: "Engadget",
 },{
-id: "entertainment-weekly",
+code: "entertainment-weekly",
 name: "Entertainment Weekly",
 },{
-id: "espn",
+code: "espn",
 name: "ESPN",
 },{
-id: "espn-cric-info",
+code: "espn-cric-info",
 name: "ESPN Cric Info",
 },{
-id: "financial-post",
+code: "financial-post",
 name: "Financial Post",
 },{
-id: "focus",
+code: "focus",
 name: "Focus",
 },{
-id: "football-italia",
+code: "football-italia",
 name: "Football Italia",
 },{
-id: "fortune",
+code: "fortune",
 name: "Fortune",
 },{
-id: "four-four-two",
+code: "four-four-two",
 name: "FourFourTwo",
 },{
-id: "fox-news",
+code: "fox-news",
 name: "Fox News",
 },{
-id: "fox-sports",
+code: "fox-sports",
 name: "Fox Sports",
 },{
-id: "globo",
+code: "globo",
 name: "Globo",
 },{
-id: "google-news",
+code: "google-news",
 name: "Google News",
 },{
-id: "google-news-ar",
+code: "google-news-ar",
 name: "Google News (Argentina)",
 },{
-id: "google-news-au",
+code: "google-news-au",
 name: "Google News (Australia)",
 },{
-id: "google-news-br",
+code: "google-news-br",
 name: "Google News (Brasil)",
 },{
-id: "google-news-ca",
+code: "google-news-ca",
 name: "Google News (Canada)",
 },{
-id: "google-news-fr",
+code: "google-news-fr",
 name: "Google News (France)",
 },{
-id: "google-news-in",
+code: "google-news-in",
 name: "Google News (India)",
 },{
-id: "google-news-is",
+code: "google-news-is",
 name: "Google News (Israel)",
 },{
-id: "google-news-it",
+code: "google-news-it",
 name: "Google News (Italy)",
 },{
-id: "google-news-ru",
+code: "google-news-ru",
 name: "Google News (Russia)",
 },{
-id: "google-news-sa",
+code: "google-news-sa",
 name: "Google News (Saudi Arabia)",
 },{
-id: "google-news-uk",
+code: "google-news-uk",
 name: "Google News (UK)",
 },{
-id: "goteborgs-posten",
+code: "goteborgs-posten",
 name: "Göteborgs-Posten",
 },{
-id: "gruenderszene",
+code: "gruenderszene",
 name: "Gruenderszene",
 },{
-id: "hacker-news",
+code: "hacker-news",
 name: "Hacker News",
 },{
-id: "handelsblatt",
+code: "handelsblatt",
 name: "Handelsblatt",
 },{
-id: "ign",
+code: "ign",
 name: "IGN",
 },{
-id: "il-sole-24-ore",
+code: "il-sole-24-ore",
 name: "Il Sole 24 Ore",
 },{
-id: "independent",
+code: "independent",
 name: "Independent",
 },{
-id: "infobae",
+code: "infobae",
 name: "Infobae",
 },{
-id: "info-money",
+code: "info-money",
 name: "InfoMoney",
 },{
-id: "la-gaceta",
+code: "la-gaceta",
 name: "La Gaceta",
 },{
-id: "la-nacion",
+code: "la-nacion",
 name: "La Nacion",
 },{
-id: "la-repubblica",
+code: "la-repubblica",
 name: "La Repubblica",
 },{
-id: "le-monde",
+code: "le-monde",
 name: "Le Monde",
 },{
-id: "lenta",
+code: "lenta",
 name: "Lenta",
 },{
-id: "lequipe",
+code: "lequipe",
 name: "L'equipe",
 },{
-id: "les-echos",
+code: "les-echos",
 name: "Les Echos",
 },{
-id: "liberation",
+code: "liberation",
 name: "Libération",
 },{
-id: "marca",
+code: "marca",
 name: "Marca",
 },{
-id: "mashable",
+code: "mashable",
 name: "Mashable",
 },{
-id: "medical-news-today",
+code: "medical-news-today",
 name: "Medical News Today",
 },{
-id: "msnbc",
+code: "msnbc",
 name: "MSNBC",
 },{
-id: "mtv-news",
+code: "mtv-news",
 name: "MTV News",
 },{
-id: "mtv-news-uk",
+code: "mtv-news-uk",
 name: "MTV News (UK)",
 },{
-id: "national-geographic",
+code: "national-geographic",
 name: "National Geographic",
 },{
-id: "national-review",
+code: "national-review",
 name: "National Review",
 },{
-id: "nbc-news",
+code: "nbc-news",
 name: "NBC News",
 },{
-id: "news24",
+code: "news24",
 name: "News24",
 },{
-id: "new-scientist",
+code: "new-scientist",
 name: "New Scientist",
 },{
-id: "news-com-au",
+code: "news-com-au",
 name: "News.com.au",
 },{
-id: "newsweek",
+code: "newsweek",
 name: "Newsweek",
 },{
-id: "new-york-magazine",
+code: "new-york-magazine",
 name: "New York Magazine",
 },{
-id: "next-big-future",
+code: "next-big-future",
 name: "Next Big Future",
 },{
-id: "nfl-news",
+code: "nfl-news",
 name: "NFL News",
 },{
-id: "nhl-news",
+code: "nhl-news",
 name: "NHL News",
 },{
-id: "nrk",
+code: "nrk",
 name: "NRK",
 },{
-id: "politico",
+code: "politico",
 name: "Politico",
 },{
-id: "polygon",
+code: "polygon",
 name: "Polygon",
 },{
-id: "rbc",
+code: "rbc",
 name: "RBC",
 },{
-id: "recode",
+code: "recode",
 name: "Recode",
 },{
-id: "reddit-r-all",
+code: "reddit-r-all",
 name: "Reddit /r/all",
 },{
-id: "reuters",
+code: "reuters",
 name: "Reuters",
 },{
-id: "rt",
+code: "rt",
 name: "RT",
 },{
-id: "rte",
+code: "rte",
 name: "RTE",
 },{
-id: "rtl-nieuws",
+code: "rtl-nieuws",
 name: "RTL Nieuws",
 },{
-id: "sabq",
+code: "sabq",
 name: "SABQ",
 },{
-id: "spiegel-online",
+code: "spiegel-online",
 name: "Spiegel Online",
 },{
-id: "svenska-dagbladet",
+code: "svenska-dagbladet",
 name: "Svenska Dagbladet",
 },{
-id: "t3n",
+code: "t3n",
 name: "T3n",
 },{
-id: "talksport",
+code: "talksport",
 name: "TalkSport",
 },{
-id: "techcrunch",
+code: "techcrunch",
 name: "TechCrunch",
 },{
-id: "techcrunch-cn",
+code: "techcrunch-cn",
 name: "TechCrunch (CN)",
 },{
-id: "techradar",
+code: "techradar",
 name: "TechRadar",
 },{
-id: "the-american-conservative",
+code: "the-american-conservative",
 name: "The American Conservative",
 },{
-id: "the-globe-and-mail",
+code: "the-globe-and-mail",
 name: "The Globe And Mail",
 },{
-id: "the-hill",
+code: "the-hill",
 name: "The Hill",
 },{
-id: "the-hindu",
+code: "the-hindu",
 name: "The Hindu",
 },{
-id: "the-huffington-post",
+code: "the-huffington-post",
 name: "The Huffington Post",
 },{
-id: "the-irish-times",
+code: "the-irish-times",
 name: "The Irish Times",
 },{
-id: "the-jerusalem-post",
+code: "the-jerusalem-post",
 name: "The Jerusalem Post",
 },{
-id: "the-lad-bible",
+code: "the-lad-bible",
 name: "The Lad Bible",
 },{
-id: "the-next-web",
+code: "the-next-web",
 name: "The Next Web",
 },{
-id: "the-sport-bible",
+code: "the-sport-bible",
 name: "The Sport Bible",
 },{
-id: "the-times-of-india",
+code: "the-times-of-india",
 name: "The Times of India",
 },{
-id: "the-verge",
+code: "the-verge",
 name: "The Verge",
 },{
-id: "the-wall-street-journal",
+code: "the-wall-street-journal",
 name: "The Wall Street Journal",
 },{
-id: "the-washington-post",
+code: "the-washington-post",
 name: "The Washington Post",
 },{
-id: "the-washington-times",
+code: "the-washington-times",
 name: "The Washington Times",
 },{
-id: "time",
+code: "time",
 name: "Time",
 },{
-id: "usa-today",
+code: "usa-today",
 name: "USA Today",
 },{
-id: "vice-news",
+code: "vice-news",
 name: "Vice News",
 },{
-id: "wired",
+code: "wired",
 name: "Wired",
 },{
-id: "wired-de",
+code: "wired-de",
 name: "Wired.de",
 },{
-id: "wirtschafts-woche",
+code: "wirtschafts-woche",
 name: "Wirtschafts Woche",
 },{
-id: "xinhua-net",
+code: "xinhua-net",
 name: "Xinhua Net",
 },{
-id: "ynet",
+code: "ynet",
 name: "Ynet",
 }]
 
@@ -725,6 +725,7 @@ $('#country').change(function(){
 });
 
 $('#source').change(function(){
+  console.log($("#source").val());
   if ($("#source").val() !== 0)$('#category').attr('disabled', true),$('#country').attr('disabled', true);
   if ($("#source").val() == 0 && $("#language").val() == 0)$('#category').attr('disabled', false),$('#country').attr('disabled', false);
 });
@@ -741,6 +742,7 @@ $('#language').change(function(){
 document.getElementById('submit').addEventListener('click', function(){
   category = document.getElementById('category').value;
   country = document.getElementById('country').value;
+  source = document.getElementById('source').value;
   language = document.getElementById('language').value;
   buildURL();
   });
@@ -748,12 +750,15 @@ document.getElementById('submit').addEventListener('click', function(){
 function buildURL(){
   var baseURL = "http://newsapi.org/v2/top-headlines?";
   console.log(baseURL);
+  console.log(category, country, source, language);
 
   if (category != 0 && category != undefined)baseURL += "category=" + category + "&";
   if (country != 0 && country != undefined)baseURL += "country=" + country + "&";
+  if (source != 0 && source != undefined)baseURL += "sources=" + source + "&";
   if (language != 0 && language != undefined)baseURL += "language=" + language + "&";
   if (baseURL === "http://newsapi.org/v2/top-headlines?")baseURL += "country=nz&"
   baseURL += "apiKey=" + myKey;
+  console.log(baseURL);
   print(baseURL);
   console.log('urlDone');
 }
@@ -768,6 +773,9 @@ function print(url){
             success: function(data){
               console.log(data);
               document.getElementById('result').innerHTML = '';
+              if (source != 0 && data.totalResults == 0) {
+                document.getElementById('result').innerHTML = 'This news source is unavaliable in this language.'
+              } else if (data.totalResults > 0){
                 for (var i = 0; i < data.articles.length; i++) {
                   var author = data.articles[i].author;
                     if (author == null && data.articles[i].source.name == null) {
@@ -791,7 +799,10 @@ function print(url){
                   '</div>' +
                   '</div>';
                 };
-              },
+              } else {
+                document.getElementById('result').innerHTML = 'The querys you have entered don\'t appear to have any results.'
+              }
+            }
             error:function(){
               console.log('error');
             }
