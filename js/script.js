@@ -774,7 +774,17 @@ function print(url){
               console.log(data);
               document.getElementById('result').innerHTML = '';
               if (source != 0 && data.totalResults == 0) {
-                document.getElementById('result').innerHTML = 'This news source is unavaliable in this language.'
+                for (var i = 0; i < languages.length; i++) {
+                  if (languages[i].code === language) {
+                    languageName = languages[i].name;
+                  }
+                }
+                for (var i = 0; i < sources.length; i++) {
+                  if (sources[i].code === source) {
+                    sourceName = sources[i].name;
+                  }
+                }
+                document.getElementById('result').innerHTML = 'The news source ' + sourceName + ' is unavaliable in ' + languageName + '.'
               } else if (data.totalResults > 0){
                 for (var i = 0; i < data.articles.length; i++) {
                   var author = data.articles[i].author;
@@ -802,8 +812,8 @@ function print(url){
               } else {
                 document.getElementById('result').innerHTML = 'The querys you have entered don\'t appear to have any results.'
               }
-            }
-            error:function(){
+            },
+             error:function(){
               console.log('error');
             }
           });
