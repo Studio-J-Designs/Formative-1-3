@@ -630,7 +630,7 @@ name: "Xinhua Net",
 },{
 code: "ynet",
 name: "Ynet",
-}]
+}];
 
 
 
@@ -756,7 +756,7 @@ function buildURL(){
   if (country != 0 && country != undefined)baseURL += "country=" + country + "&";
   if (source != 0 && source != undefined)baseURL += "sources=" + source + "&";
   if (language != 0 && language != undefined)baseURL += "language=" + language + "&";
-  if (baseURL === "http://newsapi.org/v2/top-headlines?")baseURL += "country=nz&"
+  if (baseURL === "http://newsapi.org/v2/top-headlines?")baseURL += "country=nz&";
   baseURL += "apiKey=" + myKey;
   console.log(baseURL);
   print(baseURL);
@@ -796,11 +796,11 @@ function print(url){
                       author = "Source: " + data.articles[i].source.name;
                     } else {
                       console.log(author + "3");
-                      author = "Author: " + author
-                    };
+                      author = "Author: " + author;
+                    }
                   console.log(i);
                   document.getElementById('result').innerHTML +=
-                  '<div class="card" style="width: 18rem;">' +
+                  '<div class="card plagItem" style="width: 18rem;">' +
                   '<img onerror="backupNews(this)" src="' + data.articles[i].urlToImage + '" class="card-img-top" alt="...">' +
                   '<div class="card-body">' +
                   '<h5 class="card-title">' + author + '</h5>' +
@@ -808,9 +808,9 @@ function print(url){
                   '<a href="' + data.articles[i].url + '" class="btn btn-primary">View Story</a>' +
                   '</div>' +
                   '</div>';
-                };
+                }
               } else {
-                document.getElementById('result').innerHTML = 'The querys you have entered don\'t appear to have any results.'
+                document.getElementById('result').innerHTML = 'The querys you have entered don\'t appear to have any results.';
               }
             },
              error:function(){
