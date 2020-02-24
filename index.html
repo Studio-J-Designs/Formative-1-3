@@ -7,43 +7,40 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1>Digital Paperboy</h1>
 
-    <div class="plag">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Digital Paperboy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="dropdown plagItem">
-        <select id="category" class="btn btn-secondary">
-
-        </select>
-      </div>
-
-      <div class="dropdown plagItem">
-        <select id="country" class="btn btn-secondary">
-
-        </select>
-      </div>
-
-      <div class="dropdown plagItem">
-        <select id="source" class="btn btn-secondary">
-
-        </select>
-      </div>
-
-      <div class="dropdown plagItem">
-        <select id="language" class="btn btn-secondary">
-
-        </select>
-    </div>
-
-    <div class="plagItem">
-      <button id="submit" type="button" class="btn btn-secondary">Submit</button>
-    </div>
-
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <select class="mr-sm-4" id="category"></select>
+            </li>
+            <li class="nav-item">
+              <select class="mr-sm-4" id="country"></select>
+            </li>
+            <li class="nav-item">
+              <select class="mr-sm-4" id="source"></select>
+            </li>
+            <li class="nav-item">
+              <select class="mr-sm-4" id="language"></select>
+            </li>
+          </ul>
+          <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2"  placeholder="Search" aria-label="Search">
+            <button id="submit" class="btn btn-outline-success my-2 mr-sm-5" type="submit">Submit</button>
+            <button id="about" class="btn btn-outline-dark my-2 my-sm-0" type="submit">About Page</button>
+          </div>
+        </div>
+      </nav>
 
 
   </div>
 
-  <div id="result" class="plag">
+  <div id="result" class="plag bodyArea">
 
   </div>
 

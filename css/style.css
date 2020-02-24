@@ -1,16 +1,19 @@
 body {
-  background-color: green;
-}
+  background-color: green; }
 
 .plag {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 9em;
-}
+  margin-left: 9em; }
 
 .plagItem {
   margin-right: 3em;
-  margin-bottom: 3em;
-}
+  margin-bottom: 3em; }
+
+.cardFix {
+  width: 18rem; }
+
+.bodyArea {
+  margin-top: 100px; }
 
 /*# sourceMappingURL=style.css.map */
