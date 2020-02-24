@@ -1,7 +1,5 @@
     /*jshint esversion: 6 */
 
-console.log('working');
-
 var languages = [{
   code: 0,
   name: 'Language'
@@ -632,13 +630,6 @@ code: "ynet",
 name: "Ynet",
 }];
 
-
-
-console.log(languages);
-console.log(countrys);
-
-
-
 document.getElementById('category').innerHTML = '';
 
 for (var i = 0; i < categorys.length; i++) {
@@ -664,7 +655,6 @@ for (var i = 0; i < sources.length; i++) {
 }
 
 var myKey = JSON.parse(apiKey);
-console.log(myKey[0]);
 myKey = myKey[0].key;
 
 var category,country,language,source;
@@ -682,7 +672,6 @@ $('#country').change(function(){
 });
 
 $('#source').change(function(){
-  console.log($("#source").val());
   if ($("#source").val() !== 0)$('#category').attr('disabled', true),$('#country').attr('disabled', true);
   if ($("#source").val() == 0 && $("#language").val() == 0)$('#category').attr('disabled', false),$('#country').attr('disabled', false);
 });
@@ -694,7 +683,6 @@ $('#language').change(function(){
 
 
 document.getElementById('about').addEventListener('click', function(){
-  console.log('click');
   document.getElementById('result').innerHTML ='';
   document.getElementById('aboutPage').innerHTML =
   '<div class="preheading">' + '<h7>My Name is</h7>' + '</div>'+
@@ -719,8 +707,6 @@ document.getElementById('submit').addEventListener('click', function(){
 
 function buildURL(){
   var baseURL = "http://newsapi.org/v2/top-headlines?";
-  console.log(baseURL);
-  console.log(category, country, source, language, search);
 
   if (category != 0 && category != undefined)baseURL += "category=" + category + "&";
   if (country != 0 && country != undefined)baseURL += "country=" + country + "&";
@@ -729,13 +715,10 @@ function buildURL(){
   if (search != "" && search != "[object HTMLInputElement]")baseURL += "q=" + search + "&";
   if (baseURL === "http://newsapi.org/v2/top-headlines?")baseURL += "country=nz&";
   baseURL += "apiKey=" + myKey;
-  console.log(baseURL);
   print(baseURL);
-  console.log('urlDone');
 }
 
 function print(url){
-  console.log('printURL');
 
   $.ajax({
           url: url,
@@ -769,16 +752,12 @@ function print(url){
                 for (var i = 0; i < data.articles.length; i++) {
                   var author = data.articles[i].author;
                     if (author == null && data.articles[i].source.name == null) {
-                      console.log(author + "1");
                       author = "Author: Unkown";
                     } else if (author == null) {
-                      console.log(author + "2");
                       author = "Source: " + data.articles[i].source.name;
                     } else {
-                      console.log(author + "3");
                       author = "Author: " + author;
                     }
-                  console.log(i);
                   document.getElementById('result').innerHTML +=
                   '<div class="card plagItem cardFix">' +
                   '<img onerror="backupNews(this)" src="' + data.articles[i].urlToImage + '" class="card-img-top" alt="...">' +
@@ -794,7 +773,6 @@ function print(url){
               }
             },
              error:function(){
-              console.log('error');
             }
           });
         }
