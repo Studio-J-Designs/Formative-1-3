@@ -663,49 +663,6 @@ for (var i = 0; i < sources.length; i++) {
   document.getElementById('source').innerHTML += '<option class="dropdown-item" value="' + sources[i].code + '">' + sources[i].name + '</option>';
 }
 
-
-
-
-
-// $(document).ready(function(){
-//
-// var myKey = JSON.parse(apiKey);
-// console.log(myKey[0]);
-// myKey = myKey[0].key;
-//
-//   document.getElementById('submit').addEventListener('click', function(){
-//     if (document.getElementById('language').value === 0) {
-//     } else {
-//       language = "language=" + document.getElementById('language').value + "&";
-//     }
-//     if (document.getElementById('country').value === 0) {
-//     } else {
-//       country = "country=" + document.getElementById('country').value + "&";
-//     }
-//     category = "category=" + document.getElementById('category').value + "&";
-//     console.log(category,language,country);
-//     displayData(category,language,country);
-//
-//     function displayData(ca,lg,ct){
-//
-//       $.ajax({
-//         url: `http://newsapi.org/v2/top-headlines?${ca}${lg}${ct}apiKey=${myKey}`,
-//         type:'GET',
-//         data:'json',
-//           success: function(data){
-//             console.log(data);
-//             },
-//           error:function(){
-//             console.log('error');
-//           }
-//         });
-//       }
-//
-//   });
-//
-// });
-
-
 var myKey = JSON.parse(apiKey);
 console.log(myKey[0]);
 myKey = myKey[0].key;
@@ -800,7 +757,7 @@ function print(url){
                     }
                   console.log(i);
                   document.getElementById('result').innerHTML +=
-                  '<div class="card plagItem" style="width: 18rem;">' +
+                  '<div class="card plagItem cardFix">' +
                   '<img onerror="backupNews(this)" src="' + data.articles[i].urlToImage + '" class="card-img-top" alt="...">' +
                   '<div class="card-body">' +
                   '<h5 class="card-title">' + author + '</h5>' +
