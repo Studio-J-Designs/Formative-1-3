@@ -10,6 +10,23 @@ module.exports = function(grunt) {
         dest: 'js/script.min.js'
       }
     },
+    imagemin: {
+        static: {
+            files: {
+                'dist/img.png': 'src/img.png',
+                'dist/img.jpg': 'src/img.jpg',
+                'dist/img.gif': 'src/img.gif'
+            }
+        },
+        dynamic: {
+            files: [{
+                expand: true,
+                cwd: 'src/',
+                src: ['**/*.{png,jpg,gif}'],
+                dest: 'dist/'
+            }]
+        }
+    },
     watch: {
       all: {
         files: ['sass/style.scss', 'css/style.css', 'js/script.js'],
@@ -60,6 +77,8 @@ module.exports = function(grunt) {
      grunt.loadNpmTasks('grunt-contrib-jshint');
      grunt.loadNpmTasks('grunt-contrib-uglify');
      grunt.loadNpmTasks('grunt-contrib-cssmin');
+
+     grunt.loadNpmTasks('grunt-contrib-imagemin');
 
 
 
