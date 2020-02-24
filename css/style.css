@@ -1,5 +1,5 @@
 body {
-  background-color: green; }
+  background-color: white; }
 
 .plag {
   display: flex;
@@ -15,5 +15,16 @@ body {
 
 .bodyArea {
   margin-top: 100px; }
+
+.newsName {
+  color: white !important; }
+
+.aboutPage {
+  text-align: center;
+  width: 50%;
+  margin-left: 25%; }
+
+.imgFix {
+  width: 30%; }
 
 /*# sourceMappingURL=style.css.map */

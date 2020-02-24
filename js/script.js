@@ -22,7 +22,7 @@ var languages = [{
   name: 'French'
 },{
   code: 'he',
-  name: 'Hewbrew'
+  name: 'Hebrew'
 },{
   code: 'it',
   name: 'Italian'
@@ -693,26 +693,40 @@ $('#language').change(function(){
 });
 
 
-
-
+document.getElementById('about').addEventListener('click', function(){
+  console.log('click');
+  document.getElementById('result').innerHTML ='';
+  document.getElementById('aboutPage').innerHTML =
+  '<div class="preheading">' + '<h7>My Name is</h7>' + '</div>'+
+  '<div class="heading">' + '<h1>James Murray</h1>' + '</div>' +
+  '<br><br>' +
+  '<div class="imageShot">' + '<img class="imgFix" src="assets/images/profile.jpg" alt="Profile Picture">' + '</div>' +
+  '<br><br>' +
+  '<p>For this assignment I was required to show my ability to use APIS in websites.</p>' +
+  '<p>I used ' +
+  '<a class="badge badge-info" href="https://newsapi.org/" role="button">News API</a>' +
+  ' in order to get the APIS which you can see by searching for anything.</p>';
+  });
 
 document.getElementById('submit').addEventListener('click', function(){
   category = document.getElementById('category').value;
   country = document.getElementById('country').value;
   source = document.getElementById('source').value;
   language = document.getElementById('language').value;
+  search = document.getElementById('search').value;
   buildURL();
   });
 
 function buildURL(){
   var baseURL = "http://newsapi.org/v2/top-headlines?";
   console.log(baseURL);
-  console.log(category, country, source, language);
+  console.log(category, country, source, language, search);
 
   if (category != 0 && category != undefined)baseURL += "category=" + category + "&";
   if (country != 0 && country != undefined)baseURL += "country=" + country + "&";
   if (source != 0 && source != undefined)baseURL += "sources=" + source + "&";
   if (language != 0 && language != undefined)baseURL += "language=" + language + "&";
+  if (search != "" && search != "[object HTMLInputElement]")baseURL += "q=" + search + "&";
   if (baseURL === "http://newsapi.org/v2/top-headlines?")baseURL += "country=nz&";
   baseURL += "apiKey=" + myKey;
   console.log(baseURL);
@@ -730,6 +744,15 @@ function print(url){
             success: function(data){
               console.log(data);
               document.getElementById('result').innerHTML = '';
+              document.getElementById('aboutPage').innerHTML = '';
+              if (source != 0 && data.totalResults == 0 && search != "[object HTMLInputElement]") {
+                for (var i = 0; i < sources.length; i++) {
+                  if (sources[i].code === source) {
+                    sourceName = sources[i].name;
+                  }
+                }
+                document.getElementById('result').innerHTML = 'The news source ' + sourceName + 'does not have any articles with the word "' + search + '"'
+              }
               if (source != 0 && data.totalResults == 0) {
                 for (var i = 0; i < languages.length; i++) {
                   if (languages[i].code === language) {
@@ -774,7 +797,8 @@ function print(url){
               console.log('error');
             }
           });
-}
+        }
+
 
 function backupNews(source){
   source.src="assets/images/backupNews.jpg";
